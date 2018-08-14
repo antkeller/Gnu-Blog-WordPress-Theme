@@ -1,0 +1,127 @@
+// ==========================================================================
+// BASE/_TYPOGRAPHY.SCSS
+// ==========================================================================
+
+body {
+	color: $milky-way;
+	font-family: $neuron;
+}
+
+// Headings
+h1, .h1 {
+	color: $milky-way;
+	font-family: $harryObese;
+	font-size: 28px;
+  font-weight: 600;
+  letter-spacing: .7px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h2, .h2 {
+	color: $milky-way;
+	font-family: $harryObese;
+	font-size: 26px;
+  font-weight: 400;
+  letter-spacing: .8px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h3, .h3   {
+	color: $milky-way;
+	font-family: $harryObese;
+	font-size: 18px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+h4, .h4   {
+	color: $milky-way;
+	font-family: $neuron;
+	font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+h5, .h5 {
+	color: $milky-way;
+	font-family: $harryObese;
+	font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: .6px;
+}
+
+// Subheadings
+.subheading {
+	font-weight: normal;
+}
+
+// Paragraphs
+p, .p {
+	color: $milky-way;
+	font-family: $neuron;
+	font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: .6px;
+}
+p.small,
+.wp-caption-text {
+	font-family: $neuron;
+	font-size: 1.4em;
+	font-weight: 400;
+	line-height: 1.71em;
+	margin-bottom: 2em;
+}
+// Blockquote
+blockquote {
+	font-style: italic;
+	border-left: 1px solid $steel-pipes;
+	color: $steel-pipes;
+}
+// Others
+abbr {
+	border-bottom: 1px dotted $steel-pipes;
+	cursor: help;
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	h1,
+	.h1 {
+		font-size: 36px;
+    font-weight: 600;
+    letter-spacing: .9px;
+    line-height: 1.1;
+	}
+
+	h2,
+	.h2 {
+		font-size: 30px;
+    letter-spacing: .8px;
+    line-height: 1.1;
+	}
+
+	h3,
+	.h3 {
+		font-size: 20px;
+    letter-spacing: .4px;
+	}
+
+	h5,
+	.h5 {
+		font-size: 18px;
+    letter-spacing: .7px;
+    line-height: 1.2;
+	}
+
+	p,
+	.p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}

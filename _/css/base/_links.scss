@@ -1,0 +1,36 @@
+// ==========================================================================
+// BASE/_LINKS.SCSS
+// ==========================================================================
+
+// Inline Text
+a {
+  color: $waterfall;
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &.selected {
+    text-decoration: underline;
+  }
+}
+
+.tertiary {
+	border: none;
+	font-size: 12px;
+	letter-spacing: 1.4px;
+	line-height: 1.3;
+	text-align: left;
+
+	&:hover,
+	&:focus {
+		color: $constellation;
+	}
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	.tertiary {
+		font-size: 14px;
+		letter-spacing: 1.6px;
+		line-height: 1.7;
+	}
+}

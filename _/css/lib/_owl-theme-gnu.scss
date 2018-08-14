@@ -1,0 +1,93 @@
+/*
+ *  Default theme - Owl Carousel CSS File
+ */
+
+.owl-theme-gnu {
+  overflow: hidden;
+
+  .owl-nav {
+    margin-top: 10px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    [class*='owl-'] {
+      background-color: $steel-pipes;
+      background-image: url('../img/sprite.png');
+      border-radius: 5px;
+      color: $white;
+      cursor: pointer;
+      display: inline-block;
+      margin-top: -25px;
+      position: absolute;
+      top: 50%;
+      width: 25px;
+      height: 25px;
+
+      &:hover,
+      &:focus,
+      &.disabled {
+        color: $white;
+        text-decoration: none;
+        background-color: $grizzly-gully;
+      }
+    }
+
+    .owl-prev {
+      background-position: -451px -135px;
+      left: 0;
+
+      &:hover,
+      &:focus {
+        background-position: -475px -135px;
+      }
+
+      &.disabled {
+        background-position: -499px -135px;
+      }
+    }
+
+    .owl-next {
+      background-position: -424px -135px;
+      right: 0;
+
+      &:hover,
+      &:focus {
+        background-position: -472px -104px;
+
+      }
+
+      &.disabled {
+        background-position: -516px -135px;
+      }
+    }
+  }
+
+  .owl-dots {
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+
+    .owl-dot {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+
+      span {
+        width: 18px;
+        height: 18px;
+        margin: 5px 7px;
+        background: $white;
+        display: block;
+        -webkit-backface-visibility: visible;
+        -webkit-transition: opacity 200ms ease;
+        -moz-transition: opacity 200ms ease;
+        -ms-transition: opacity 200ms ease;
+        -o-transition: opacity 200ms ease;
+        transition: opacity 200ms ease;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+        border: 1px solid $steel-pipes;
+      }
+    }
+  }
+}

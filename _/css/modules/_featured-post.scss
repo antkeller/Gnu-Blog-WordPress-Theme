@@ -1,0 +1,74 @@
+// ==========================================================================
+// MODULES/_FEATURED-POST.SCSS
+// ==========================================================================
+
+.featured-post {
+  padding: 0 0 30px;
+  margin-bottom: 30px;
+
+  .featured-post-content {
+    max-width: 100%;
+    overflow: hidden;
+    text-align: center;
+
+    a {
+      display: block;
+      text-decoration: none;
+
+      img {
+        width: 100%;
+        margin-bottom: 15px;
+        border-bottom: 2px solid $milky-way;
+      }
+
+      h2 {
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 30px;
+      }
+
+      &.cta {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+
+        .button {
+          padding: 15px 30px;
+        }
+      }
+    }
+
+    .content-large {
+      display: none;
+    }
+
+    .content-small {
+      display: block;
+    }
+  }
+
+  .cta {
+    display: inline-block;
+    margin: 0 5px;
+    padding-top: 5px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-small) {
+
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+  .featured-post {
+    .featured-post-content {
+      .content-large {
+        display: block;
+      }
+
+      .content-small {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,231 @@
+// ==========================================================================
+// COMPONENTS/_FOOTER.SCSS
+// ==========================================================================
+
+footer {
+	background: $white;
+	clear: both;
+	border-top: 2px solid $milky-way;
+
+	.footer-wrapper {
+		max-width: 1280px;
+		margin: 0 auto;
+		padding: 15px;
+		position: relative;
+
+		.stay-connected {
+			margin-bottom: 15px;
+		}
+	}
+
+	a {
+		color: $milky-way;
+	}
+
+	.footer-nav-wrapper {
+		.nav-footer {
+			ul {
+				list-style-type: none;
+
+				li {
+					margin-bottom: 15px;
+
+					a {
+						font-family: $neuron;
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 1.5;
+						letter-spacing: .6px;
+
+						&:hover {
+							color: $waterfall !important;
+						}
+					}
+
+					&.cust-service {
+						color: $milky-way;
+					}
+				}
+			}
+
+		}
+	}
+
+	.subscribe {
+		margin-bottom: 5px;
+
+		h3 {
+			color: $milky-way;
+			padding-bottom: 20px;
+			margin: 0;
+		}
+
+		form {
+			.email {
+				background: $white;
+				border: 1px solid $milky-way;
+				box-sizing: border-box;
+				height: 50px;
+				margin-bottom: 10px;
+				padding: 0 10px;
+				width: 100%;
+
+				&.invalid {
+					color: red;
+				}
+
+				&:focus {
+					color: #333 !important;
+				}
+			}
+
+			.button {
+				width: 100%;
+			}
+		}
+	}
+
+	.footer-copy {
+		p {
+			font-size: 12px;
+			color: $milky-way;
+
+			span {
+				display: block;
+			}
+		}
+	}
+}
+
+.social-links {
+	li {
+		display: inline-block;
+		margin-right: 20px;
+		width: 20px;
+		height: 20px;
+
+		a {
+			background: url('../img/sprite.png') no-repeat;
+			display: block;
+      width: 22px;
+      height: 22px;
+
+			&.instagram-link {
+				background-position: 0 0;
+
+				&:hover,
+				&:focus {
+					background-position: -25px 0px;
+				}
+			}
+
+			&.facebook-link {
+				background-position: -45px 0;
+
+				&:hover,
+				&:focus {
+					background-position: -70px 0px;
+				}
+			}
+
+			&.twitter-link {
+				background-position: -148px 0px;
+
+				&:hover,
+				&:focus {
+					background-position: -173.5px 0px;
+				}
+			}
+
+			&.vimeo-link {
+				background-position: -199px 0px;
+
+				&:hover,
+				&:focus {
+					background-position: -224.5px 0px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-small) {
+	footer {
+		.footer-wrapper {
+			padding: 20px;
+		}
+
+		.social-links {
+			width: 100%;
+			float: left;
+		}
+
+		.nav-footer {
+			width: 100%;
+			clear: left;
+		}
+
+		.subscribe {
+			width: 75%;
+			float: left;
+			padding-bottom: 0;
+		}
+
+		.footer-copy {
+			width: 100%;
+			float: none;
+			padding-top: 25px;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-medium) {
+	footer {
+		.stay-connected {
+			width: 50%;
+			float: right;
+
+			.subscribe {
+				width: 100%;
+				margin-bottom: 0;
+
+				.email {
+					width: 60%;
+					float: left;
+				}
+
+				.button {
+					width: 40%;
+					float: left;
+				}
+			}
+		}
+
+		.footer-nav-wrapper {
+			width: 50%;
+			float: left;
+		}
+
+		.footer-copy {
+			p {
+				span {
+					display: inline-block;
+					margin-left: 5px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: $breakpoint-large) {
+	footer {
+		.stay-connected {
+			width: 40%;
+		}
+
+		.footer-nav-wrapper {
+			width: 60%;
+		}
+	}
+}

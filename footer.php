@@ -48,22 +48,22 @@
 					<div class="social-links">
 						<ul>
 							<li class="instagram">
-								<a href="http://instagram.com/GNUsnowboards" class="instagram-link" target="_blank">
+								<a href="https://instagram.com/GNUsnowboards" class="instagram-link" target="_blank">
 									<span class="hidden">Instagram</span>
 								</a>
 							</li>
 							<li class="facebook">
-								<a href="http://www.facebook.com/gnuSnowboards" class="facebook-link" target="_blank">
+								<a href="https://www.facebook.com/gnuSnowboards" class="facebook-link" target="_blank">
 									<span class="hidden">Facebook</span>
 								</a>
 							</li>
 							<li class="twitter">
-								<a href="http://twitter.com/GNUsnowboards" class="twitter-link" target="_blank">
+								<a href="https://twitter.com/GNUsnowboards" class="twitter-link" target="_blank">
 									<span class="hidden">Twitter</span>
 								</a>
 							</li>
 							<li class="vimeo">
-								<a href="http://vimeo.com/gnu" class="vimeo-link" target="_blank">
+								<a href="https://vimeo.com/gnu" class="vimeo-link" target="_blank">
 									<span class="hidden">Vimeo</span>
 								</a>
 							</li>
@@ -74,11 +74,11 @@
 				<div class="footer-nav-wrapper">
 					<nav class="nav-footer">
 						<ul>
-							<li><a href="/contact/">Contact</a></li>
-							<li><a href="#">Support</a></li>
-							<li><a href="#">About</a></li>
-							<li><a href="#">Privacy</a></li>
-							<li><a href="#">Terms</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a href="/customer-service">Support</a></li>
+							<li><a href="/about-us">About</a></li>
+							<li><a href="/privacy-policy-cookie-restriction-mode">Privacy</a></li>
+							<li><a href="/terms-and-conditions">Terms</a></li>
 							<li class="cust-service">Customer Service: 206-204-7800</li>
 						</ul>
 					</nav>

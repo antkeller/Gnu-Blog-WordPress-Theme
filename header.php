@@ -71,7 +71,7 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG         GGGGGG
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon.ico" />
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/_/img/apple-touch-icon-precomposed.png" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<?php include '_/inc/header-includes.php' ?>
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/_/js/lib/respond-1.4.2.min.js"></script>
@@ -84,8 +84,8 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG         GGGGGG
 	<div class="wrapper">
 		<header>
 			<div class="header-wrapper">
-				<div class="logos-wrapper" itemscope itemtype="http://schema.org/Organization">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="logo" class="site-title" rel="home" itemprop="url">
+				<div class="logos-wrapper" itemscope itemtype="https://schema.org/Organization">
+					<a href="https://prod.gnu.com" id="logo" class="site-title" rel="home" itemprop="url">
 						<img src="<?php echo get_template_directory_uri(); ?>/_/img/gnu-logo.jpg" alt="gnu logo" />
 					</a>
 				</div><!-- .logos-wrapper -->

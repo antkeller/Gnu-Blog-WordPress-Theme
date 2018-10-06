@@ -70,6 +70,7 @@ p, .p {
   line-height: 1.6;
   letter-spacing: .6px;
 }
+
 p.small,
 .wp-caption-text {
 	font-family: $neuron;
@@ -78,12 +79,7 @@ p.small,
 	line-height: 1.71em;
 	margin-bottom: 2em;
 }
-// Blockquote
-blockquote {
-	font-style: italic;
-	border-left: 1px solid $steel-pipes;
-	color: $steel-pipes;
-}
+
 // Others
 abbr {
 	border-bottom: 1px dotted $steel-pipes;

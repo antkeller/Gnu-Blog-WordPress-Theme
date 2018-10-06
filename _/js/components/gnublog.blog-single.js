@@ -7,7 +7,9 @@ var GNUBLOG = GNUBLOG || {};
 
 GNUBLOG.BlogSingle = function () {
 	this.config = {
-		firstMediaFound: false
+		totalItems: 0,
+		gallerySlider: null,
+		gallerySliderNav: null
 	};
 	this.init();
 };
@@ -15,12 +17,6 @@ GNUBLOG.BlogSingle.prototype = {
 	init: function () {
 		var self = this;
 		self.checkVideos();
-		if($('body').hasClass('single-format-image')) {
-			self.checkImages();
-		}
-		if($('body').hasClass('single-format-gallery')) {
-			self.checkGallery();
-		}
 		// check for gallery, init if exists
 		if($('gallery')) {
 			self.galleryInit();
@@ -29,75 +25,94 @@ GNUBLOG.BlogSingle.prototype = {
 	checkVideos: function () {
 		var self = this;
 		// setup responsive video
-		$('.post .post-content').fitVids();
-		// check to see if parent is 'p' and remove it if so
-		$('.fluid-width-video-wrapper').each(function (index) {
-			// check if parent is a paragraph and remove / replace with div
-			if ($(this).parent().is('p')) {
-				$(this).unwrap();
-			}
-			$(this).wrap('<div class="post-video"></div>');
-			// check if it's the first element
-			if ($('body').hasClass('single-format-video') && index === 0) {
-				$('.post-video').prependTo('.post .post-content');
-				self.config.firstMediaFound = true;
-			}
-		});
-	},
-	checkImages: function () {
-		var self, firstImage;
-		self = this;
-		// if no video was found, find the first image
-		if (!self.config.firstMediaFound) {
-			firstImage = $('.post .post-content').find('img:first');
-			if (firstImage.length) {
-				if (firstImage.parent().is('a')) {
-					firstImage = firstImage.parent();
-				}
-				// check if it's wrapped by a caption
-				if (firstImage.parent().is('.wp-caption')) {
-					firstImage = firstImage.parent();
-					firstImage.wrap('<div class="first-image"></div>');
-					self.config.firstMediaFound = true;
-				} else if (firstImage.parent().is('.gallery-icon')) {
-					// wrapped by gallery, do nothing
-				} else {
-					// not wrapped by caption, so add paragraph
-					firstImage.wrap('<p class="first-image"></p>');
-					self.config.firstMediaFound = true;
-				}
-				// image was found, prepend it
-				if (self.config.firstMediaFound) {
-					$('.first-image').prependTo('.post .post-content');
-				}
-			}
-		}
-	},
-	checkGallery: function () {
-		var self, $firstGallery;
-		self = this;
-		// if no video was found, find the first image
-		if (!self.config.firstMediaFound) {
-			$firstGallery = $('.post .post-content').find('.gallery:first');
-			if ($firstGallery.length) {
-				self.config.firstMediaFound = true;
-				// image was found, prepend it
-				$firstGallery.prependTo('.post .post-content');
-			}
-		}
+		$('.post .entry-content').fitVids();
 	},
 	galleryInit: function () {
-		var self, carousel;
+		var self, numSlick;
 		self = this;
-		// set up owl carousel
-		carousel = $(".gallery .owl-carousel").owlCarousel({
-			items: 1,
-			dots: true,
-			lazyLoad: true,
-			autoplay: true,
-			autoplayTimeout: 5000,
-			autoplayHoverPause: true,
-			loop: true
-		});
+		// check for gallery
+		if ($('.gallery')) {
+			// determine total items in gallery
+			self.config.totalItems = $('.gallery .gallery-item').length;
+			// set up gallery slider for thumbnails
+			if ($('.gallery')) {
+				// set up gallery slider
+				var numSlick = 0;
+				$('.gallery').each(function() {
+					numSlick++;
+					self.config.gallerySlider = $(this).addClass('gallery-' + numSlick);
+					self.config.gallerySlider.slick({
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						lazyLoad: 'ondemand',
+						fade: false,
+						centerMode: false,
+						mobileFirst: true,
+						adaptiveHeight: true,
+						asNavFor: '.gallery-nav-' + numSlick,
+						responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								arrows: true,
+								prevArrow: '<button type="button" class="slick-prev"></button>',
+								nextArrow: '<button type="button" class="slick-next"></button>'
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								arrows: false
+							}
+						}]
+					});
+				});
+				numSlick = 0;
+				$('.gallery-nav').each(function() {
+					numSlick++;
+					self.config.gallerySliderNav = $(this).addClass('gallery-nav-' + numSlick);
+					self.config.gallerySliderNav.slick({
+						lazyLoad: 'ondemand',
+						slidesToScroll: 1,
+						slidesToShow: 5,
+						variableWidth: true,
+						asNavFor: '.gallery-' + numSlick,
+						arrows: false,
+						centerMode: true,
+						centerPadding: '50px',
+						mobileFirst: true,
+						focusOnSelect: true,
+						infinite: false,
+						responsive: [
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 3
+							}
+						},
+						{
+							breakpoint: 480,
+							settings: {
+								slidesToShow: 3
+							}
+						}]
+					});
+				});
+			}
+			// assign keyboard events to gallery
+			$(document).on('keyup.gallery', function (e) {
+				var code, currentIndex, newIndex, slideIndex;
+				// get the code
+				code = (e.keyCode ? e.keyCode : e.which);
+				// check which arrow key
+				if (code == 39) {
+					// right arrow
+					self.showNext();
+				} else if (code == 37) {
+					// left arrow
+					self.showPrevious();
+				}
+			});
+		}
 	}
 };

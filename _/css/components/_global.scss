@@ -116,6 +116,41 @@ svg * {
   }
 }
 
+// gallery
+.gallery {
+  margin-top: 50px;
+
+  .gallery-item {
+    padding-left: 0;
+    padding-right: 0;
+
+    img {
+      max-height: 800px;
+      height: auto;
+      margin: 0 auto 10px;
+    }
+
+    .gallery-caption {
+      width: 83.33333%;
+      margin: 0 auto;
+      font-size: .875em;
+      color: $steel-pipes;
+    }
+  }
+}
+
+.gallery-nav {
+  margin-bottom: 50px;
+
+  .slick-slide {
+    padding: 0 5px;
+
+    .gallery-nav-thumb {
+      cursor: pointer;
+    }
+  }
+}
+
 .zoom-icon {
   display: none;
 }
@@ -127,7 +162,6 @@ svg * {
 }
 
 @media screen and (min-width: $breakpoint-medium) {
-
   .site-main {
     padding-top: 71px;
   }
@@ -163,6 +197,14 @@ svg * {
   #accessibility {
     padding-top: 110px;
     margin-top: -110px;
+  }
+
+  .gallery {
+    .gallery-item {
+      .gallery-caption {
+        width: 66.66667%;
+      }
+    }
   }
 }
 

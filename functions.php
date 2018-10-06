@@ -228,24 +228,31 @@ function gnu_gallery_shortcode($attr) {
         return $output;
     }
     $selector = "gallery-{$instance}";
-    $output = "<div id=\"$selector\" class=\"gallery galleryid-{$id}\">\n\t\t\t\t\t\t<div class=\"gallery-list owl-carousel owl-theme\">\n";
+    $output = "<div id=\"$selector\" class=\"gallery row container-fluid slick-theme galleryid-{$id}\">\n";
     $i = 0;
     foreach ( $attachments as $id => $attachment ) {
         // always make it grab the link to the file
-        $image_output = wp_get_attachment_link( $id, $size, false, false );
+        $image_output = wp_get_attachment_image( $id, $size, false, false );
         $image_meta  = wp_get_attachment_metadata( $id );
         $orientation = '';
         if ( isset( $image_meta['height'], $image_meta['width'] ) )
             $orientation = ( $image_meta['height'] > $image_meta['width'] ) ? 'portrait' : 'landscape';
         $output .= "\t\t\t\t\t\t\t<div class='gallery-item'>\n\t\t\t\t\t\t\t\t<div class='gallery-icon {$orientation}'>$image_output</div>";
         if ( $captiontag && trim($attachment->post_excerpt) ) {
-            $output .= "\n\t\t\t<p class='gallery-caption small'>" . wptexturize($attachment->post_excerpt) . "</p>";
+            $output .= "\n\t\t\t<p class='gallery-caption'>" . wptexturize($attachment->post_excerpt) . "</p>";
         }
         $output .= "\n\t\t\t\t\t\t\t</div>\n";
     }
-    $output .= "\t\t\t\t\t\t</div>\n\t\t\t\t\t</div><!-- END .gallery -->\n";
-    return $output;
-}
+		$output .= "\n\t\t\t\t\t</div><!-- END .gallery -->\n";
+		$output .= "<div id=\"\" class=\"gallery-nav slick-theme\">\n";
+		foreach ($attachments as $id => $attachment ) {
+			// grab image
+			$image_output = wp_get_attachment_image( $id, 'thumbnail', true, false );
+			$output .= "\t\t\t\t\t\t\t<div class='gallery-nav-thumb'>$image_output</div>";
+		}
+		$output .= "\n\t\t\t\t\t</div>";
+	  return $output;
+	}
 add_shortcode('gallery', 'gnu_gallery_shortcode');
 
 // custom meta box for featured posts

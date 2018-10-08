@@ -18,6 +18,16 @@ footer {
 		}
 	}
 
+	// Subscribe button
+	.button {
+		background: $steel-pipes;
+
+		&:hover,
+		&:focus {
+			background: $grizzly-gully;
+		}
+	}
+
 	a {
 		color: $milky-way;
 	}
@@ -44,10 +54,10 @@ footer {
 
 					&.cust-service {
 						color: $milky-way;
+						font-size: .875em;
 					}
 				}
 			}
-
 		}
 	}
 

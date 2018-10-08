@@ -85,7 +85,7 @@
 				</div><!-- .footer-nav-wrapper -->
 				<div class="clearfix visible-sm visible-md visible-lg"></div>
 				<div class="footer-copy">
-					<p>3400 Stone Way, Ste #200 – Seattle, WA 98103<span>&copy; <?php echo date("Y"); ?> Lib Technologies – All rights reserved</span></p>
+					<p>3400 Stone Way, Ste #200 – Seattle, WA 98103<span>&copy; <?php echo date("Y"); ?> GNU – All rights reserved</span></p>
 				</div>
 			</div><!-- END .footer-wrapper -->
 		</footer>

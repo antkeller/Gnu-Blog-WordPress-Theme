@@ -205,12 +205,14 @@ header .nav-menu li.current-menu-item a, header .nav-menu li.blog a { color: #09
 footer { background: #FFF; clear: both; border-top: 2px solid #333; }
 footer .footer-wrapper { max-width: 1280px; margin: 0 auto; padding: 15px; position: relative; }
 footer .footer-wrapper .stay-connected { margin-bottom: 15px; }
+footer .button { background: #6C6D70; }
+footer .button:hover, footer .button:focus { background: #5A5D5E; }
 footer a { color: #333; }
 footer .footer-nav-wrapper .nav-footer ul { list-style-type: none; }
 footer .footer-nav-wrapper .nav-footer ul li { margin-bottom: 15px; }
 footer .footer-nav-wrapper .nav-footer ul li a { font-family: "Neuron", Helvetica, Arial, sans-serif; font-weight: 400; font-size: 14px; line-height: 1.5; letter-spacing: .6px; }
 footer .footer-nav-wrapper .nav-footer ul li a:hover { color: #09F !important; }
-footer .footer-nav-wrapper .nav-footer ul li.cust-service { color: #333; }
+footer .footer-nav-wrapper .nav-footer ul li.cust-service { color: #333; font-size: .875em; }
 footer .subscribe { margin-bottom: 5px; }
 footer .subscribe h3 { color: #333; padding-bottom: 20px; margin: 0; }
 footer .subscribe form .email { background: #FFF; border: 1px solid #333; -webkit-box-sizing: border-box; box-sizing: border-box; height: 50px; margin-bottom: 10px; padding: 0 10px; width: 100%; }
@@ -419,7 +421,7 @@ svg * { fill: currentColor; }
 .post-filters .filters ul li a { color: #FFF; display: block; text-decoration: none; padding: 2px; }
 .post-filters .filters ul li a:hover, .post-filters .filters ul li a:focus { color: #09F; }
 
-.blog .filters ul li.active a, .category-mens .filters li a.mens, .category-womens .filters li a.womens, .category-events .filters li a.events, .category-art .filters li a.art, .term-post-format-video .filters li a.videos { color: #09F; }
+.blog .filters ul li a.all, .blog .filters ul li.active a, .category-mens .filters li a.mens, .category-womens .filters li a.womens, .category-events .filters li a.events, .category-art .filters li a.art, .term-post-format-video .filters li a.videos { color: #09F; }
 
 @media screen and (min-width: 768px) { .post-filters .filters ul li { font-size: 16px; }
   .post-filters .filters ul li a { padding: 2px 10px; } }

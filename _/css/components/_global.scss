@@ -131,10 +131,11 @@ svg * {
     }
 
     .gallery-caption {
-      width: 83.33333%;
-      margin: 0 auto;
-      font-size: .875em;
       color: $steel-pipes;
+      font-size: .875em;
+      margin: 0 auto;
+      text-align: center;
+      width: 83.33333%;
     }
   }
 }

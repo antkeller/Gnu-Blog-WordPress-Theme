@@ -45,15 +45,17 @@ header {
   }
 
 	.nav-menu {
-    font-family: $neuron;
+    font-family: $harryObese;
     float: left;
     clear: both;
 
     li {
       display: inline-block;
+			letter-spacing: 1.3px;
       padding: 5px;
       margin-bottom: 0;
       padding-bottom: 0;
+			text-transform: uppercase;
 
       &:nth-child(1) {
         padding-left: 0;
@@ -102,6 +104,11 @@ header {
 
 @media screen and (min-width: $breakpoint-medium) {
   header {
+		.nav-menu {
+			li {
+				font-size: 18px;
+			}
+		}
 		.search-toggle-wrapper {
       position: absolute;
       top: 12px;

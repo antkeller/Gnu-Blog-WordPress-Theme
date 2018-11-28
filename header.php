@@ -55,7 +55,7 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG         GGGGGG
 	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-	})(window,document,'script','dataLayer','GTM-T8D6V8');</script>
+	})(window,document,'script','dataLayer','GTM-5FRBJ7M');</script>
 	<!-- End Google Tag Manager -->
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<!--[if IE ]>
@@ -68,8 +68,12 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG         GGGGGG
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="google-site-verification" content="xxx" />
 	<meta name="google-site-verification" content="xxx" />
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon.ico" />
-	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/_/img/apple-touch-icon-precomposed.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/_/img/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon-16x16.png">
+	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/_/img/site.webmanifest">
+	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/_/img/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/_/img/favicon.ico">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<link rel="profile" href="https://gmpg.org/xfn/11" />
 	<?php include '_/inc/header-includes.php' ?>
@@ -81,11 +85,17 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG         GGGGGG
 	<![endif]-->
 </head>
 <body <?php body_class(); ?>>
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FRBJ7M"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
 	<div class="wrapper">
 		<header>
 			<div class="header-wrapper">
 				<div class="logos-wrapper" itemscope itemtype="https://schema.org/Organization">
-					<a href="https://prod.gnu.com" id="logo" class="site-title" rel="home" itemprop="url">
+					<a href="https://www.gnu.com" id="logo" class="site-title" rel="home" itemprop="url">
 						<img src="<?php echo get_template_directory_uri(); ?>/_/img/gnu-logo.jpg" alt="gnu logo" />
 					</a>
 				</div><!-- .logos-wrapper -->

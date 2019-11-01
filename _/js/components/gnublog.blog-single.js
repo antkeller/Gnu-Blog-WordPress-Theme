@@ -37,7 +37,7 @@ GNUBLOG.BlogSingle.prototype = {
 			// set up gallery slider for thumbnails
 			if ($('.gallery')) {
 				// set up gallery slider
-				var numSlick = 0;
+				numSlick = 0;
 				$('.gallery').each(function() {
 					numSlick++;
 					self.config.gallerySlider = $(this).addClass('gallery-' + numSlick);

@@ -96,7 +96,7 @@ GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG         GGGGGG
 			<div class="header-wrapper">
 				<div class="logos-wrapper" itemscope itemtype="https://schema.org/Organization">
 					<a href="https://www.gnu.com" id="logo" class="site-title" rel="home" itemprop="url">
-						<img src="<?php echo get_template_directory_uri(); ?>/_/img/gnu-logo.jpg" alt="gnu logo" />
+						<img src="<?php echo get_template_directory_uri(); ?>/_/img/gnu-logo.svg" alt="gnu logo" />
 					</a>
 				</div><!-- .logos-wrapper -->
 				<a class="screen-reader-text skip-link" href="#content">Skip to content</a>
